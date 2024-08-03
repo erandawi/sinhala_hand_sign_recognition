@@ -87,20 +87,20 @@ To collect data for additional Sinhala letters, update the sinhala_letters dicti
 
 ### Future Work
 
-- \*\*Extend the model to recognize the entire Sinhala sign alphabet.
-- \*\*Improve the accuracy and efficiency of the model.
-- \*\*Implement a more user-friendly interface for the web application.
-- \*\*Explore the use of other deep learning architectures for better performance.
-- \*\*Integrate additional preprocessing steps to enhance the model's robustness.
-- \*\*Implement a mobile application version for broader accessibility.
-- \*\*License
-- \*\*This project is licensed under the MIT License. See the LICENSE file for more details.
+- Extend the model to recognize the entire Sinhala sign alphabet.
+- Improve the accuracy and efficiency of the model.
+- Implement a more user-friendly interface for the web application.
+- Explore the use of other deep learning architectures for better performance.
+- Integrate additional preprocessing steps to enhance the model's robustness.
+- Implement a mobile application version for broader accessibility.
+- License
+- This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ### References
 
-1. \*\*NumPy Documentation
-2. \*\*OpenCV Documentation
-3. \*\*MediaPipe Documentation
-4. \*\*scikit-learn Documentation
-5. \*\*TensorFlow Documentation
-6. \*\*Flask Documentation
+1. NumPy Documentation
+2. OpenCV Documentation
+3. MediaPipe Documentation
+4. scikit-learn Documentation
+5. TensorFlow Documentation
+6. Flask Documentation
