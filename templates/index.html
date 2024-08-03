@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Sign Recognition</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="title">
+      <h1>SINHALA SIGN ALPHABET RECOGNIZER</h1>
+    </div>
+    <div class="container">
+      <div class="left-column">
+        <h2>Video Feed</h2>
+        <img src="{{ url_for('video_feed') }}" id="video_feed" />
+      </div>
+      <div class="right-column">
+        <h2>Prediction</h2>
+        <div id="prediction"></div>
+        <button onclick="startPrediction()">Start</button>
+        <button onclick="pausePrediction()">Pause</button>
+      </div>
+    </div>
+    <div class="intro">
+      <p>
+        This application recognizes the sinhala hand sign alphabet. Point your
+        hand signs to the camera to see the magic!
+      </p>
+    </div>
+    <script>
+      let interval;
+
+      function updatePrediction() {
+        fetch("/predict", {
+          method: "POST",
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("prediction").innerText = data.prediction;
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      function startPrediction() {
+        interval = setInterval(updatePrediction, 1000);
+        document.getElementById(
+          "video_feed"
+        ).src = `{{ url_for('video_feed') }}`;
+      }
+
+      function pausePrediction() {
+        clearInterval(interval);
+        document.getElementById("video_feed").src = "";
+      }
+    </script>
+  </body>
+</html>
