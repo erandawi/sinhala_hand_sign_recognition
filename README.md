@@ -55,6 +55,8 @@ The custom CNN model used in this project consists of the following layers:
 7. **Dropout Layer 2**: Dropout rate of 0.5.
 8. **Output Layer**: Number of units equal to the number of classes (3 in the current setup), activation function Softmax.
 
+![alt text](utils/hand-landmarks.png)
+
 ### Why a Custom CNN?
 
 A custom CNN is used to tailor the architecture to the specific needs of the hand sign recognition task. The model is designed to capture spatial features from the hand landmarks effectively and make accurate predictions based on those features.

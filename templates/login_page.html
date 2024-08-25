@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Signify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class ='container-login'>
+        <h2>Login</h2>
+        <form method="POST" action="{{ url_for('login') }}">
+            <input type="text" placeholder="Username" name="username" id="username" required>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <a href="#">Reset Username/Password</a>
+    </div>
+    <script>
+        function showPassword() {
+            var password = document.getElementById('password');
+            password.type = password.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+</html>

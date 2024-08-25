@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Sign Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container-predictive">
+        <div class="left-column">
+            <img src="{{ url_for('video_feed') }}" id="video_feed" />
+        </div>
+        <div class="right-column">
+            <div id="prediction">Predicted Sign Here</div>
+            <button onclick="startPrediction()">Start</button>
+            <button onclick="pausePrediction()">Pause</button>
+        </div>
+    </div>
+    <script>
+        let interval;
+
+        function updatePrediction() {
+            fetch("/predict", {
+                method: "POST",
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("prediction").innerText = data.prediction;
+            });
+        }
+
+        function startPrediction() {
+            interval = setInterval(updatePrediction, 1000);
+        }
+
+        function pausePrediction() {
+            clearInterval(interval);
+        }
+    </script>
+</body>
+</html>

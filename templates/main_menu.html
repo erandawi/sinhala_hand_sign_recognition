@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Sign Recognition Setup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container-mainmenu">
+    <div class="main-title">
+        <h1>SIGNIFY</h1>
+    </div>
+    <div class ='sub-title'>
+        <h4>A Deep Learning based Sinhala Hand Sign Recognitor</h4>
+    </div>
+        <div class="column-one">
+            <h2>Configuration & Information</h2>
+            <p>Before starting the hand sign recognition, please ensure your camera is properly connected and positioned to capture hand gestures.</p>
+        </div>
+        <div class="column-two">
+        <h2>Instructions</h2>
+            <p>1. Make sure your hand is visible and centered in the camera feed.</p>
+            <p>2. Use a plain background to improve recognition accuracy.</p>
+            <p>3. Adjust the lighting to avoid shadows and enhance visibility.</p>
+            <p>4. Click "Start" on the next page to begin the prediction.</p>
+        </div>
+        <div class ='button-one'>
+            <button onclick="window.location.href='{{ url_for('prediction_page') }}'">To Predictive System</button>
+            <button onclick="window.location.href='{{ url_for('related_notes') }}'">To Read Me</button>
+        </div>
+    </div>
+</body>
+</html>
