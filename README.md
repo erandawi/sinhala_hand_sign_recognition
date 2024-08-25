@@ -1,6 +1,6 @@
 # Sinhala Hand Sign Recognition
 
-This project aims to create a hand sign recognition system for the Sinhala sign alphabet. The current version of the project recognizes three Sinhala characters: අ (A), ආ (AA), and ඉ (I). The ultimate goal is to extend the system to recognize the entire Sinhala sign alphabet.
+This project aims to create a hand sign recognition system for the Sinhala sign alphabet. The current version of the project recognizes three Sinhala characters: අ , ආ , and ඉ . The ultimate goal is to extend the system to recognize the entire Sinhala sign alphabet.
 
 ## Table of Contents
 
